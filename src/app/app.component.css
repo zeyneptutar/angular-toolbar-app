@@ -1,0 +1,22 @@
+.esp-toolbar-wrapper {
+    min-height: 4rem;
+    background-color: #ededed;
+    margin: 0;
+    padding: 0 1rem;
+}
+.esp-icon-wrapper {
+    padding: 10px;
+}
+
+i {
+    font-size: 30px;
+    color: #9d9d9c;
+    cursor: pointer;
+}
+
+i:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #616060;
+}

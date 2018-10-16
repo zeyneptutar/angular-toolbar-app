@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+    <div class="row esp-toolbar-wrapper">
+      <div class="col-" *ngFor="let item of toolbarIconsArray">
+        <div class="esp-icon-wrapper">
+            <i class="{{item.class}}"></i>
+        </div>
+      </div>
+      <div class="col-">
+        <div style="float: left;height: 45px;border-right: 1px solid #cccccc;margin-top: 5px;margin-bottom: 6px;padding-left: 10px;">&nbsp;</div>
+      </div>
+      <div class="col-" *ngFor="let item of navigationIconsArray">
+          <div class="esp-icon-wrapper">
+              <i class="{{item.class}}"></i>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="col-md-4 mt-3">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" [(ngModel)]="dataIconText">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" id="button-addon2" (click)="addIcon(true)">Data Ikon</button>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4 mt-3">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" [(ngModel)]="naviIconText">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button" id="button-addon2" (click)="addIcon(false)">Navi Ikon</button>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
