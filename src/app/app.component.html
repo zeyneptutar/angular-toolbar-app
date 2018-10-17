@@ -1,20 +1,49 @@
 <div class="row">
   <div class="col-12">
+    <h5>With component</h5>
+    <div class="row esp-toolbar-wrapper">
+        <app-datatoolbar [toolbarIconsArray]="toolbarIconsArray"></app-datatoolbar>
+        
+
+      <div class="col-auto">
+        <div style="float: left;height: 45px;border-right: 1px solid #cccccc;margin-top: 5px;margin-bottom: 6px; margin-right: 10px;
+        margin-left: 10px;">&nbsp;</div>
+      </div>
+      
+        <app-navitoolbar [navigationIconsArray]="navigationIconsArray"></app-navitoolbar>
+
+    </div>
+  </div> 
+</div>
+
+<div class="row mt-5">
+  <div class="col-12">
+    <h5>Without Component</h5>
     <div class="row esp-toolbar-wrapper">
 
-      <app-datatoolbar [toolbarIconsArray]="toolbarIconsArray"></app-datatoolbar>
+      <div class="col-auto" *ngFor="let item of toolbarIconsArray">
+        <div class="esp-icon-wrapper">
+            <i class="{{item.class}}"></i>
+        </div>
+      </div>
+        
 
-      <div class="row">
-        <div class="col-">
-          <div style="float: left;height: 45px;border-right: 1px solid #cccccc;margin-top: 5px;margin-bottom: 6px;">&nbsp;</div>
+      <div class="col-auto">
+        <div style="float: left;height: 45px;border-right: 1px solid #cccccc;margin-top: 5px;margin-bottom: 6px; margin-right: 10px;
+        margin-left: 10px;">&nbsp;</div>
+      </div>
+      
+        <div class="col-auto" *ngFor="let item of navigationIconsArray">
+        <div class="esp-icon-wrapper">
+            <i class="{{item.class}}"></i>
         </div>
       </div>
 
-      <app-navitoolbar [navigationIconsArray]="navigationIconsArray"></app-navitoolbar>
     </div>
   </div>
+</div>
 
-  <div class="col-12">
+<div class="col-12">
     <div class="col-md-4 mt-3">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="fas fa-check" [(ngModel)]="dataIconText">
@@ -32,5 +61,3 @@
           </div>
     </div>
   </div>
-  
-</div>
